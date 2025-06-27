@@ -1,10 +1,155 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>居捨士清潔公司</title>
-  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: "Noto Sans TC", sans-serif;
+      margin: 0;
+      background-color: #F6F6F6;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #A1D6D6;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #fff;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: 500;
+    }
+
+    .hero {
+      background: linear-gradient(to right, #A1D6D6, #DFF6F0);
+      padding: 4rem 2rem;
+      text-align: center;
+      color: #333;
+    }
+
+    .section {
+      padding: 3rem 2rem;
+      background-color: #fff;
+      margin: 1rem auto;
+      border-radius: 8px;
+      max-width: 1100px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: center;
+    }
+
+    .card {
+      background-color: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      max-width: 300px;
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card h3 {
+      margin: 1rem;
+      color: #007C91;
+    }
+
+    .card p {
+      margin: 0 1rem 1rem;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+    }
+
+    th, td {
+      padding: 10px;
+      border: 1px solid #ddd;
+    }
+
+    thead {
+      background-color: #f5f5f5;
+    }
+
+    tfoot {
+      background-color: #f0f8ff;
+    }
+
+    .contact-info {
+      margin-bottom: 2rem;
+    }
+
+    form {
+      display: grid;
+      gap: 1rem;
+    }
+
+    input, textarea, select {
+      width: 100%;
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+
+    button {
+      background-color: #FFB6A6;
+      color: white;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    button:hover {
+      background-color: #ff9d8b;
+    }
+
+    @media (max-width: 768px) {
+      .cards {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -14,6 +159,7 @@
       <ul>
         <li><a href="#about">關於我們</a></li>
         <li><a href="#services">服務項目</a></li>
+        <li><a href="#pricing">報價方案</a></li>
         <li><a href="#contact">聯絡我們</a></li>
       </ul>
     </nav>
@@ -32,7 +178,7 @@
     <h2>服務項目</h2>
     <div class="cards">
       <div class="card">
-        <img src="https://images.unsplash.com/photo-1592194996308-7b43878e84a6?auto=format&fit=crop&w=800&q=80" alt="居家清潔">
+        <img src="images/pexels-fotoaibe-1571468.jpg" alt="居家清潔">
         <h3>居家清潔</h3>
         <p>全戶清潔、廚衛打掃、玻璃清潔等，專業團隊到府服務。</p>
       </div>
@@ -48,112 +194,108 @@
       </div>
     </div>
   </section>
+
   <section id="pricing" class="section">
-  <h2>報價方案</h2>
-  <p>我們提供簡單透明的報價方式，也可依照客戶需求客製化調整。</p>
+    <h2>報價方案</h2>
+    <p>我們提供簡單透明的報價方式，也可依照客戶需求客製化調整。</p>
 
-  <table style="width:100%; border-collapse: collapse;">
-    <thead>
-      <tr style="background-color: #f5f5f5;">
-        <th style="padding: 10px; border: 1px solid #ddd;">項目</th>
-        <th style="padding: 10px; border: 1px solid #ddd;">數量</th>
-        <th style="padding: 10px; border: 1px solid #ddd;">單價 (NT$)</th>
-        <th style="padding: 10px; border: 1px solid #ddd;">小計</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td style="padding: 10px; border: 1px solid #ddd;">一頁式網站設計（含手機版）</td>
-        <td style="padding: 10px; border: 1px solid #ddd;">1</td>
-        <td style="padding: 10px; border: 1px solid #ddd;">6,000</td>
-        <td style="padding: 10px; border: 1px solid #ddd;">6,000</td>
-      </tr>
-      <tr>
-        <td style="padding: 10px; border: 1px solid #ddd;">Google 地圖、聯絡表單設置</td>
-        <td style="padding: 10px; border: 1px solid #ddd;">1</td>
-        <td style="padding: 10px; border: 1px solid #ddd;">1,500</td>
-        <td style="padding: 10px; border: 1px solid #ddd;">1,500</td>
-      </tr>
-      <tr>
-        <td style="padding: 10px; border: 1px solid #ddd;">主機與網址設定輔助</td>
-        <td style="padding: 10px; border: 1px solid #ddd;">1</td>
-        <td style="padding: 10px; border: 1px solid #ddd;">1,000</td>
-        <td style="padding: 10px; border: 1px solid #ddd;">1,000</td>
-      </tr>
-      <tr>
-        <td style="padding: 10px; border: 1px solid #ddd;">SEO 設定與網站基本速度優化</td>
-        <td style="padding: 10px; border: 1px solid #ddd;">1</td>
-        <td style="padding: 10px; border: 1px solid #ddd;">1,000</td>
-        <td style="padding: 10px; border: 1px solid #ddd;">1,000</td>
-      </tr>
-    </tbody>
-    <tfoot>
-      <tr style="background-color: #f0f8ff;">
-        <td colspan="3" style="padding: 10px; border: 1px solid #ddd; text-align:right;"><strong>總計</strong></td>
-        <td style="padding: 10px; border: 1px solid #ddd;"><strong>NT$9,500</strong></td>
-      </tr>
-    </tfoot>
-  </table>
+    <table>
+      <thead>
+        <tr>
+          <th>項目</th>
+          <th>數量</th>
+          <th>單價 (NT$)</th>
+          <th>小計</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>一頁式網站設計（含手機版）</td>
+          <td>1</td>
+          <td>6,000</td>
+          <td>6,000</td>
+        </tr>
+        <tr>
+          <td>Google 地圖、聯絡表單設置</td>
+          <td>1</td>
+          <td>1,500</td>
+          <td>1,500</td>
+        </tr>
+        <tr>
+          <td>主機與網址設定輔助</td>
+          <td>1</td>
+          <td>1,000</td>
+          <td>1,000</td>
+        </tr>
+        <tr>
+          <td>SEO 設定與網站基本速度優化</td>
+          <td>1</td>
+          <td>1,000</td>
+          <td>1,000</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="3" style="text-align:right;"><strong>總計</strong></td>
+          <td><strong>NT$9,500</strong></td>
+        </tr>
+      </tfoot>
+    </table>
 
-  <p style="margin-top: 1rem;">📌 如需購物車、會員系統、多語言功能等，將依功能另行報價。</p>
-</section>
+    <p style="margin-top: 1rem;">📌 如需購物車、會員系統、多語言功能等，將依功能另行報價。</p>
+  </section>
 
-
- <section id="contact" class="section contact">
-  <h2>聯絡我們</h2>
-  
-  <div class="contact-info">
-    <div class="contact-text">
-      <p>電話：0903832750  (Jimmy)<br>
-      Line：@subcrew28 <br>
+  <section id="contact" class="section">
+    <h2>聯絡我們</h2>
+    <div class="contact-info">
+      <p>電話：0903832750 (Jimmy)<br>
+      Line：<a href="https://lin.ee/your-id" target="_blank">subcrew28</a><br>
       地址：台南市清潔區整潔路99號</p>
-
-  <h2>網站需求問答表</h2>
-  <form action="https://formspree.io/f/mgvyykvv" method="POST">
-    <label>品牌名稱 / 公司名稱：</label>
-    <input type="text" name="company" required>
-
-    <label>網站用途（如品牌介紹、展示產品、預約等）：</label>
-    <input type="text" name="purpose" required>
-
-    <label>是否有參考網站？請提供網址：</label>
-    <textarea name="reference" rows="2"></textarea>
-
-    <label>主要服務 / 商品項目：</label>
-    <textarea name="services" rows="2"></textarea>
-
-    <label>是否已有圖片與文案內容？</label>
-    <select name="content">
-      <option value="yes">已有</option>
-      <option value="need-help">需要協助撰寫與設計</option>
-    </select>
-
-    <label>網站預計頁面數量：</label>
-    <input type="text" name="pages">
-
-    <label>需要哪些功能？</label><br>
-    <input type="checkbox" name="features" value="Google 地圖"> Google 地圖
-    <input type="checkbox" name="features" value="聯絡表單"> 聯絡表單
-    <input type="checkbox" name="features" value="FB/IG 連結"> FB/IG 連結
-    <input type="checkbox" name="features" value="多語言"> 多語言
-    <input type="checkbox" name="features" value="其他"> 其他<br><br>
-
-    <label>預算範圍：</label>
-    <input type="text" name="budget">
-
-    <label>希望完成日期：</label>
-    <input type="date" name="deadline">
-
-    <label>聯絡人姓名與 Email：</label>
-    <input type="text" name="name" required>
-    <input type="email" name="email" required>
-
-    <button type="submit">送出表單</button>
-  </form>
-</section>
-
     </div>
-      </iframe>
-    </div>
-  </div>
-</section>
+
+    <h2>網站需求問答表</h2>
+    <form action="https://formspree.io/f/mgvyykvv" method="POST">
+      <label>品牌名稱 / 公司名稱：</label>
+      <input type="text" name="company" required>
+
+      <label>網站用途：</label>
+      <input type="text" name="purpose" required>
+
+      <label>是否有參考網站？</label>
+      <textarea name="reference" rows="2"></textarea>
+
+      <label>主要服務 / 商品項目：</label>
+      <textarea name="services" rows="2"></textarea>
+
+      <label>是否已有圖片與文案內容？</label>
+      <select name="content">
+        <option value="yes">已有</option>
+        <option value="need-help">需要協助撰寫與設計</option>
+      </select>
+
+      <label>網站預計頁面數量：</label>
+      <input type="text" name="pages">
+
+      <label>需要哪些功能？</label><br>
+      <input type="checkbox" name="features" value="Google 地圖"> Google 地圖
+      <input type="checkbox" name="features" value="聯絡表單"> 聯絡表單
+      <input type="checkbox" name="features" value="FB/IG 連結"> FB/IG 連結
+      <input type="checkbox" name="features" value="多語言"> 多語言
+      <input type="checkbox" name="features" value="其他"> 其他<br><br>
+
+      <label>預算範圍：</label>
+      <input type="text" name="budget">
+
+      <label>希望完成日期：</label>
+      <input type="date" name="deadline">
+
+      <label>聯絡人姓名與 Email：</label>
+      <input type="text" name="name" required>
+      <input type="email" name="email" required>
+
+      <button type="submit">送出表單</button>
+    </form>
+  </section>
+
+</body>
+</html>
